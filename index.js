@@ -4,7 +4,9 @@ const fs = require("fs");
 const axios = require('axios');
 require('dotenv').config();
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
-const token = process.env.DISCORD_BOT_TOKEN;const { QuickDB } = require("quick.db");
+const token = process.env.DISCORD_BOT_TOKEN;
+const api_url = process.env.MCSS_API_TOKEN;
+const { QuickDB } = require("quick.db");
 const ConsoleCache = {};
 
 client.db = new QuickDB();
@@ -12,7 +14,7 @@ client.commands = new Collection();
 client.commands.jsonArray = [];
 
 const instance = axios.create({
-    baseURL: 'https://services.redfog18.com:25560', // https://services.redfog18.com:25560
+    baseURL: api_url,
 	timeout: 2000,
     httpsAgent: new (require('https').Agent)({
         rejectUnauthorized: false,
