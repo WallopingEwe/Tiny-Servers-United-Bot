@@ -4,17 +4,17 @@
 Requires Node v20 or higher.
 
 ##  Startup
-Firstly, plug in the values in the .env (quotes are not needed)
-Secondly, run `npm i` in a terminal.
+Firstly, plug in the values in the .env (quotes are not needed)  
+Secondly, run `npm i` in a terminal.  
 Thirdly run `node index.js`
 
 ## Bot Commands
-/set (Settings [Administrator Only!])
-/server (Checks information about a minecraft server)
+/set (Settings [Administrator Only!])  
+/server (Checks information about a minecraft server)  
 /profile (Gets information about a minecraft user)
 
 ## Settings (Administrator Only!)
-/set
-API Key (Add your MCSS api key) 
-Tracking Add (Allows you to track your MCSS servers status)
+/set  
+API Key (Add your MCSS api key)   
+Tracking Add (Allows you to track your MCSS servers status)  
 Tracking Remove (Remove tracking for a server)
