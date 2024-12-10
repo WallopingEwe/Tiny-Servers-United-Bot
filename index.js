@@ -6,6 +6,7 @@ require('dotenv').config();
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 const token = process.env.DISCORD_BOT_TOKEN;
 const api_url = process.env.MCSS_API_TOKEN;
+const application_id = process.env.APPLICATION_ID;
 const { QuickDB } = require("quick.db");
 const ConsoleCache = {};
 
@@ -64,7 +65,7 @@ const rest = new REST().setToken(token);
 		console.log(`Started refreshing ${client.commands.size} application (/) commands.`);
 
 		const data = await rest.put(
-			Routes.applicationGuildCommands("1287727901931868170", "276150986391814146"),
+			Routes.applicationCommands(application_id),
 			{ body: client.commands.jsonArray },
 		);
 
