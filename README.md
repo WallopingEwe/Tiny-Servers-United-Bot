@@ -9,11 +9,11 @@ Secondly, run `npm i` in a terminal.
 Thirdly run `node index.js`
 
 ## Bot Commands
-/set (Settings [Administrator Only!])  
+/set (Settings `Administrator Only!`)  
 /server (Checks information about a minecraft server)  
 /profile (Gets information about a minecraft user)
 
-## Settings (Administrator Only!)
+## Settings `Administrator Only!`
 /set  
 API Key (Add your MCSS api key)   
 Tracking Add (Allows you to track your MCSS servers status)  
