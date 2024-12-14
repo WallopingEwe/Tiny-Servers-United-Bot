@@ -281,13 +281,13 @@ client.on('interactionCreate', async interaction => {
 				}
 				case "channels_add": {
 					let serverName = interaction.fields.getTextInputValue('setting-input');
-					let chanChannelId = interaction.fields.getTextInputValue('setting-input2');
+					let chatChannelId = interaction.fields.getTextInputValue('setting-input2');
 					let consoleChannelId = interaction.fields.getTextInputValue('setting-input3');
 					let statusChannelId = interaction.fields.getTextInputValue('setting-input4');
 					let pngUrl = interaction.fields.getTextInputValue('setting-input5');
 
 					let channels = await client.db.get(`tracking.${interaction.guild.id}.channels`) || [];
-					let channel = interaction.guild.channels.cache.get(chanChannelId)
+					let channel = interaction.guild.channels.cache.get(chatChannelId)
 					let channel2 = interaction.guild.channels.cache.get(consoleChannelId)
 					let channel3 = interaction.guild.channels.cache.get(statusChannelId)
 					let apiKey = await client.db.get(`tracking.${interaction.guild.id}.api_key`)
