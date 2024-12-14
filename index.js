@@ -5,7 +5,7 @@ const axios = require('axios');
 require('dotenv').config();
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 const token = process.env.DISCORD_BOT_TOKEN;
-const api_url = process.env.MCSS_API_TOKEN;
+const api_url = process.env.MCSS_API_URL;
 const application_id = process.env.APPLICATION_ID;
 const { QuickDB } = require("quick.db");
 const ConsoleCache = {};
