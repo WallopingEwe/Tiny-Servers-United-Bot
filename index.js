@@ -95,7 +95,7 @@ client.on('messageCreate', async (message) => {
 				"serverIds": [
 					chat_channel.uuid
 				],
-				"command": "say " + `[${message.member.displayName}]: ` + message.content,
+				"command": "say " + `[${message.member.displayName}]: ` + message.content.replaceAll("\n", " "),
 				}, 
 				{
 					headers: {
